@@ -6,6 +6,8 @@ import pl.pijok.tpo6_bj_s24322.annotations.Column;
 import pl.pijok.tpo6_bj_s24322.annotations.Table;
 import pl.pijok.tpo6_bj_s24322.lib.Entity;
 
+import java.time.LocalDate;
+
 @Table(tableName = "books")
 @NoArgsConstructor
 @AllArgsConstructor
@@ -22,5 +24,19 @@ public class BookEntity extends Entity {
 
     @Column(name = "description")
     private String description;
+
+    @Column(name = "isbn")
+    private String isbn;
+
+    @Column(name = "publishDate")
+    private LocalDate publishDate;
+
+    @Column(name = "rating")
+    private Integer rating;
+
+    @Column(name = "creationDate")
+    private LocalDate creationDate;
+
+
 
 }
