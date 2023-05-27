@@ -3,8 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <title>Search</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Here we can search</h1>
+    <script src="js/search.js"></script>
+
+    <div class="nav-bar">
+        <div class="nav-header">
+            <div class="tlt-logo">
+                <img class="tlt-image" src="img/tlt.png" alt="logo">
+            </div>
+            <div class="tlt-title">
+                <i>TLT Company</i>
+            </div>
+        </div>
+        <div class="nav-item-box">
+            <div class="nav-item">
+                <a href="http://localhost:8080/TPO6_BJ_S24322-1.0-SNAPSHOT/searchBooks" class="navbar-link">Search</a>
+                <div class="navbar-underline selected"></div>
+            </div>
+            <div class="nav-item">
+                <a href="http://localhost:8080/TPO6_BJ_S24322-1.0-SNAPSHOT/findBook" class="navbar-link">Find by id</a>
+                <div class="navbar-underline"></div>
+            </div>
+            <div class="nav-item">
+                <a href="http://localhost:8080/TPO6_BJ_S24322-1.0-SNAPSHOT/addBook" class="navbar-link">Add</a>
+                <div class="navbar-underline"></div>
+            </div>
+        </div>
+    </div>
+    <div class="main-container">
+        <div class="left-container">
+
+            <div class="hype-text">
+                ZNAJDŹ <b>KSIĄŻKI</b><br>
+                OD <b>ZARAZ!</b>
+            </div>
+
+            <form id="searchForm">
+                <input type="text" name="author" id="author" class="text-input" placeholder="Autor. . ." /> <br>
+                <input type="text" name="title" id="title" class="text-input" placeholder="Tytuł. . ." /> <br>
+                <button type="button" class="button" onclick="searchBooks()">Znajdź</button> <br>
+            </form>
+        </div>
+        <div class="right-container">
+            <img src="img/hands.png" class="hands-image">
+        </div>
+
+        <div class="tableContainer"></div>
+    </div>
 </body>
 </html>

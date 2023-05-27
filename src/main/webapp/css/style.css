@@ -1,0 +1,235 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #F9F1DD;
+}
+
+.text-input {
+    background-color: rgba(242, 208, 114, 0.56);
+    width: 50%;
+    height: 3rem;
+    margin-left: 20%;
+    margin-bottom: 1%;
+    border: none;
+    border-radius: 1rem;
+    color: #2D4350;
+    padding-left: 1rem;
+    font-family: Arial, serif;
+    font-style: normal;
+    letter-spacing: 0.025em;
+    font-size: 1.25rem;
+}
+
+.hype-text {
+    font-family: Arial, serif;
+    margin-left: 20%;
+    letter-spacing: 0.245em;
+    font-size: 3rem;
+    line-height: 193.2%;
+}
+
+.button {
+    font-family: Arial, serif;
+    font-style: normal;
+    width: 25%;
+    height: 3rem;
+    background: #F2D072;
+    border: none;
+    color: #2D4350;
+    border-radius: 1rem;
+    margin-left: 32%;
+    font-size: 1.25rem;
+}
+
+.jebane-kolko1 {
+    position: absolute;
+    height: 30rem;
+    width: 30rem;
+    border-radius: 50rem;
+    background-color: #FAE9BC;
+    right: -5%;
+    top: -25%
+}
+
+.jebane-kolko2 {
+    position: absolute;
+    height: 30rem;
+    width: 30rem;
+    border-radius: 50rem;
+    background-color: #FAE9BC;
+    right: 10%;
+    top: -35%
+}
+
+.nav-bar {
+    height: 6rem;
+    display: flex;
+    width: 100%;
+    border-radius: 0 0 1rem 1rem;
+    background: linear-gradient(90deg, #F2D072 30.81%, #D77558 115.53%);
+    flex: 1;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    z-index: 10;
+    position: relative;
+}
+
+.nav-header {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    align-content: center;
+}
+
+.nav-item-box {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+}
+
+.navbar-link {
+    font-family: Arial, serif;
+    font-style: normal;
+    text-decoration: none;
+    color: #2D4350;
+}
+
+.navbar-underline {
+    height: 0.15rem;
+    background-color: #2D4350;
+    width: 120%;
+    margin-left: -10%;
+}
+
+.nav-item {
+    width: max-content;
+    margin-top: 3%;
+}
+
+.selected {
+    background-color: #D77558 !important;
+    height: 0.25rem;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.tlt-logo {
+    margin-top: 2.5%;
+    height: 3rem;
+    margin-left: 5%;
+    background: linear-gradient(163.92deg, #E0C375 14.89%, #D77558 88.81%);
+    width: 3rem;
+}
+
+.tlt-image {
+    height: 3rem;
+    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.5));
+
+}
+
+.tlt-title {
+    margin-top: 4%;
+    margin-left: 1%;
+    font-family: "AniMe Matrix - MB_EN", serif;
+    color: #2D4350;
+    letter-spacing: 0.355em;
+}
+
+.left-container {
+    padding-top: 2.5%;
+    width: 50%;
+    float: left;
+}
+
+.right-container {
+    width: 50%;
+    float: right;
+}
+
+.hands-image{
+    margin-left: 15%;
+    filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.5));
+    position: relative;
+    z-index: 10;
+}
+
+.bottom-bar {
+    height: 50%;
+    width: 50%;
+    margin-left: 10%;
+}
+
+.search-results-container {
+    width: 65%;
+    height: 30rem;
+    overflow-y: scroll;
+    margin-left: 15%;
+    margin-top: 1%;
+    font-family: Arial, serif;
+}
+
+.search-result-item {
+    padding-top: 1%;
+    width: 90%;
+    background-color: #F2D072;
+    border-radius: 1rem;
+    height: 6rem;
+    padding-left: 5%;
+    margin-top: 1%;
+    padding-right: 5%;
+}
+
+.item-left-size {
+    width: 40%;
+    float: left;
+}
+
+.item-right-size {
+    width: 60%;
+    float: right;
+}
+
+.item-title {
+    font-size: 1.5rem;
+}
+
+.item-author {
+
+}
+
+.item-id {
+    margin-top: 2%;
+    font-size: 1.5rem;
+}
+
+.search-result-title{
+    margin-top: 1%;
+    font-size: 2rem;
+    font-family: Arial, serif;
+    margin-left: 15%;
+    letter-spacing: 0.245em;
+    color: #2D4350;
+}
+
+.return-button {
+    margin-top: 1%;
+    height: 2%;
+    width: 2%;
+    margin-left: 15%;
+}
+
+.search-results-container::-webkit-scrollbar-track {
+    background-color: #F2D072;
+    border-radius: 17px;
+}
+
+.search-results-container::-webkit-scrollbar-thumb  {
+    background-color: #F8E4B0;
+    border-radius: 17px;
+}

@@ -42,6 +42,7 @@
   </resources>
   <servers>
     <server config-ref="server-config" name="server">
+      <application-ref ref="TPO6_BJ_S24322-1.0-SNAPSHOT" virtual-servers="server"></application-ref>
       <resource-ref ref="jdbc/__TimerPool"></resource-ref>
       <resource-ref ref="jdbc/__default"></resource-ref>
       <resource-ref ref="jms/__defaultConnectionFactory"></resource-ref>
@@ -450,5 +451,16 @@
     <secure-admin-principal dn="CN=localhost-instance,OU=GlassFish,O=Eclipse.org Foundation Inc,L=Ottawa,ST=Ontario,C=CA"></secure-admin-principal>
   </secure-admin>
   <clusters></clusters>
-  <applications></applications>
+  <applications>
+    <application context-root="/TPO6_BJ_S24322-1.0-SNAPSHOT" object-type="user" name="TPO6_BJ_S24322-1.0-SNAPSHOT" directory-deployed="true" location="file:/S:/IdeaProjects/TPO6_BJ_S24322/target/TPO6_BJ_S24322-1.0-SNAPSHOT/">
+      <property name="archiveType" value="war"></property>
+      <property name="defaultAppName" value="TPO6_BJ_S24322-1.0-SNAPSHOT"></property>
+      <property name="appLocation" value="file:/S:/IdeaProjects/TPO6_BJ_S24322/target/TPO6_BJ_S24322-1.0-SNAPSHOT/"></property>
+      <module name="TPO6_BJ_S24322-1.0-SNAPSHOT">
+        <engine sniffer="security"></engine>
+        <engine sniffer="web"></engine>
+        <engine sniffer="weld"></engine>
+      </module>
+    </application>
+  </applications>
 </domain>

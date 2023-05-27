@@ -1,14 +1,10 @@
 package pl.pijok.tpo6_bj_s24322.book.dto;
 
-import lombok.*;
-import pl.pijok.tpo6_bj_s24322.lib.Dto;
+import lombok.Builder;
+import pl.pijok.tpo6_bj_s24322.lib.SearchCriteria;
 
-@Getter
-@ToString
-public class BookDto extends Dto {
-
-    public BookDto() {
-    }
+@Builder
+public class BookSearchCriteria extends SearchCriteria {
 
     private Integer bookId;
     private String title;

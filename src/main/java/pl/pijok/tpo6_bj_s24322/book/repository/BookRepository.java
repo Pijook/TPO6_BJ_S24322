@@ -10,9 +10,11 @@ public interface BookRepository {
 
     List<BookDto> getBooks();
 
-    Optional<BookDto> findBook(long bookId);
+    Optional<BookDto> findBook(int bookId);
 
     List<BookDto> searchBooks(SearchCriteria criteria);
+
+    boolean addBook(BookDto bookDto);
 
     void initTable();
 

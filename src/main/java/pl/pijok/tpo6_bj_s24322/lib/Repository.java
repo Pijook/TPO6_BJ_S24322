@@ -4,6 +4,8 @@ import pl.pijok.tpo6_bj_s24322.annotations.Column;
 import pl.pijok.tpo6_bj_s24322.annotations.Table;
 
 import java.lang.reflect.Field;
+import java.util.ArrayList;
+import java.util.List;
 
 public abstract class Repository {
 
@@ -25,6 +27,7 @@ public abstract class Repository {
 
         if(allFieldsEmpty) {
             sql.append(";");
+            System.out.println("CREATED SELECT QUERY: " + sql.toString());
             return sql.toString();
         }
 
@@ -55,6 +58,7 @@ public abstract class Repository {
         }
 
         sql.append(";");
+        System.out.println("CREATED SELECT QUERY: " + sql.toString());
         return sql.toString();
     }
 
@@ -62,34 +66,56 @@ public abstract class Repository {
         StringBuilder sql = new StringBuilder("INSERT INTO " + entity.getClass().getAnnotation(Table.class).tableName());
         sql = new StringBuilder(sql + " (");
 
-        for(int i = 0; i < Entity.class.getFields().length; i++) {
-            if(i > 0) {
+        boolean filledFirst = false;
+
+        List<String> skipFields = new ArrayList<>();
+
+        for(int i = 0; i < entity.getClass().getDeclaredFields().length; i++) {
+            Field field = entity.getClass().getDeclaredFields()[i];
+            field.setAccessible(true);
+            Column column = field.getAnnotation(Column.class);
+            if(column.ignore()) {
+                skipFields.add(field.getName());
+                continue;
+            }
+
+            if(filledFirst) {
                 sql.append(", ");
             }
-            Field field = Entity.class.getFields()[i];
-            Column column = field.getAnnotation(Column.class);
+            else{
+                filledFirst = true;
+            }
+
             sql.append(column.name());
         }
 
         sql.append(") VALUES (");
 
+        filledFirst = false;
         for(int i = 0; i < dto.getClass().getDeclaredFields().length; i++) {
-            if(i > 0) {
-                sql.append(", ");
-            }
-
-            Field field = dto.getClass().getFields()[i];
+            Field field = dto.getClass().getDeclaredFields()[i];
             field.setAccessible(true);
 
+            if(skipFields.contains(field.getName())) {
+                continue;
+            }
+
+            if(filledFirst) {
+                sql.append(", ");
+            }
+            else{
+                filledFirst = true;
+            }
+
             try {
-                sql.append(field.get(dto));
+                sql.append("'").append(field.get(dto)).append("'");
             } catch (IllegalAccessException e) {
                 e.printStackTrace();
             }
         }
 
         sql.append(");");
-
+        System.out.println("CREATED INSERT: " + sql.toString());
         return sql.toString();
     }
 

@@ -24,8 +24,6 @@ public class DataSource {
         props.setProperty("dataSource.serverName", "db.tlt.world");
         props.put("dataSource.logWriter", new PrintWriter(System.out));
 
-        System.out.println("AAAAAAAAAAAAA " + props.getProperty("dataSource.serverName"));
-
         config = new HikariConfig(props);
         ds = new HikariDataSource(config);
     }

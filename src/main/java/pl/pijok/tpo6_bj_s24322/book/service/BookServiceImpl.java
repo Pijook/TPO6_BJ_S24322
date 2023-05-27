@@ -19,13 +19,18 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
-    public Optional<BookDto> findBook(long bookId) {
+    public Optional<BookDto> findBook(int bookId) {
         return repository.findBook(bookId);
     }
 
     @Override
     public List<BookDto> searchBooks(SearchCriteria criteria) {
         return repository.searchBooks(criteria);
+    }
+
+    @Override
+    public boolean addBook(BookDto bookDto) {
+        return repository.addBook(bookDto);
     }
 
 }

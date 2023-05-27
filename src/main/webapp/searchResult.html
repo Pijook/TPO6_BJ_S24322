@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Search</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/searchResult.js"></script>
+</head>
+<body onload="searchBooks()">
+  <div class="nav-bar">
+    <div class="nav-header">
+      <div class="tlt-logo">
+        <img class="tlt-image" src="img/tlt.png" alt="logo">
+      </div>
+      <div class="tlt-title">
+        <i>TLT Company</i>
+      </div>
+    </div>
+    <div class="nav-item-box">
+      <div class="nav-item">
+        <a href="http://localhost:8080/TPO6_BJ_S24322-1.0-SNAPSHOT/searchBooks" class="navbar-link">Search</a>
+        <div class="navbar-underline"></div>
+      </div>
+      <div class="nav-item">
+        <a href="http://localhost:8080/TPO6_BJ_S24322-1.0-SNAPSHOT/findBook" class="navbar-link">Find by id</a>
+        <div class="navbar-underline"></div>
+      </div>
+      <div class="nav-item">
+        <a href="http://localhost:8080/TPO6_BJ_S24322-1.0-SNAPSHOT/addBook" class="navbar-link">Add</a>
+        <div class="navbar-underline selected"></div>
+      </div>
+    </div>
+  </div>
+  <div class="main-container">
+
+    <a href="#" onclick="history.back()">
+      <img class="return-button" src="img/return">
+    </a>
+
+    <div class="search-result-title">Wyniki wyszukiwania:</div>
+    <div class="search-results-container" id="search-result-container" >
+      <!--<div class="search-result-item">
+        <div class="item-left-size">
+          <div class="item-title">Tytul</div>
+          <div class="item-author">Autor</div>
+          <div class="item-id">ID</div>
+        </div>
+        <div class="item-right-size">
+          <div class="item-description">Harry Potter, sierota i podrzutek, od niemowlęcia wychowywany był przez ciotkę i wuja, którzy traktowali go jak piąte koło u wozu. Pochodzenie chłopca owiane jest tajemnicą</div>
+        </div>
+      </div>-->
+    </div>
+  </div>
+</body>
+</html>

@@ -2,6 +2,7 @@ package pl.pijok.tpo6_bj_s24322.lib;
 
 import jakarta.servlet.http.HttpServletRequest;
 import pl.pijok.tpo6_bj_s24322.annotations.Column;
+import pl.pijok.tpo6_bj_s24322.book.dto.BookSearchCriteria;
 
 import java.lang.reflect.Field;
 import java.sql.ResultSet;
@@ -11,8 +12,11 @@ import java.util.List;
 
 public class Mapper {
 
-    public SearchCriteria mapSearchCriteria(HttpServletRequest request) {
-        return SearchCriteria.builder()
+    public SearchCriteria mapBookSearchCriteria(HttpServletRequest request) {
+        String bookIdString = getValueFromParameter(request, "bookId");
+        Integer bookId = bookIdString != null ? Integer.parseInt(bookIdString) : null;
+        return BookSearchCriteria.builder()
+                .bookId(bookId)
                 .author(getValueFromParameter(request, "author"))
                 .title(getValueFromParameter(request, "title"))
                 .description(getValueFromParameter(request, "description"))

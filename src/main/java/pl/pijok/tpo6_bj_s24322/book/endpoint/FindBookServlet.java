@@ -28,10 +28,10 @@ public class FindBookServlet extends HttpServlet {
             response.sendError(HttpServletResponse.SC_BAD_REQUEST);
         }
 
-        long bookId = 0L;
+        int bookId = 0;
 
         try{
-            bookId = Long.parseLong(bookIdString);
+            bookId = Integer.parseInt(bookIdString);
         }
         catch (NumberFormatException e) {
             response.sendError(HttpServletResponse.SC_BAD_REQUEST);

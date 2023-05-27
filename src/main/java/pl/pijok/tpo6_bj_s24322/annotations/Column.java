@@ -11,4 +11,6 @@ public @interface Column {
 
     public String name() default "";
 
+    public boolean ignore() default false;
+
 }

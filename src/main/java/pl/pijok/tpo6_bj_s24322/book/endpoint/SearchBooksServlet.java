@@ -30,7 +30,7 @@ public class SearchBooksServlet extends HttpServlet {
         response.setContentType("application/json");
         response.setCharacterEncoding("UTF-8");
 
-        SearchCriteria criteria = mapper.mapSearchCriteria(request);
+        SearchCriteria criteria = mapper.mapBookSearchCriteria(request);
 
         out.println(gson.toJson(service.searchBooks(criteria)));
     }

@@ -3,6 +3,7 @@ package pl.pijok.tpo6_bj_s24322.book.repository;
 import jakarta.inject.Inject;
 import pl.pijok.tpo6_bj_s24322.DataSource;
 import pl.pijok.tpo6_bj_s24322.book.dto.BookDto;
+import pl.pijok.tpo6_bj_s24322.book.dto.BookSearchCriteria;
 import pl.pijok.tpo6_bj_s24322.book.entity.BookEntity;
 import pl.pijok.tpo6_bj_s24322.lib.Mapper;
 import pl.pijok.tpo6_bj_s24322.lib.Repository;
@@ -16,7 +17,7 @@ import java.util.Optional;
 
 public class BookRepositoryImpl extends Repository implements BookRepository {
 
-    private static final BookEntity entity = new BookEntity();
+    private static final BookEntity entity = new BookEntity(1, "title", "author", "desc");
 
     private static final String INIT_TABLES = "CREATE TABLE IF NOT EXISTS pjatk.books (" +
             "book_id serial primary key," +
@@ -30,13 +31,13 @@ public class BookRepositoryImpl extends Repository implements BookRepository {
 
     @Override
     public List<BookDto> getBooks() {
-        String sql = createSelectSql(SearchCriteria.builder().build(), entity);
+        String sql = createSelectSql(BookSearchCriteria.builder().build(), entity);
         return executeBookDtoQuery(sql);
     }
 
     @Override
-    public Optional<BookDto> findBook(long bookId) {
-        String sql = createSelectSql(SearchCriteria.builder().build(), entity);
+    public Optional<BookDto> findBook(int bookId) {
+        String sql = createSelectSql(BookSearchCriteria.builder().bookId(bookId).build(), entity);
         Connection connection = DataSource.getConnection();
 
         ResultSet resultSet = null;
@@ -55,6 +56,19 @@ public class BookRepositoryImpl extends Repository implements BookRepository {
     public List<BookDto> searchBooks(SearchCriteria criteria) {
         String sql = createSelectSql(criteria, entity);
         return executeBookDtoQuery(sql);
+    }
+
+    @Override
+    public boolean addBook(BookDto bookDto) {
+        String sql = createInsertSql(bookDto, entity);
+        Connection connection = DataSource.getConnection();
+        try {
+            connection.prepareStatement(sql).execute();
+            return true;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
     }
 
     @Override
