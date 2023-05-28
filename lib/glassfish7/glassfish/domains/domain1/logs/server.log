@@ -41772,3 +41772,279 @@ file:/S:/IdeaProjects/TPO6_BJ_S24322/lib/glassfish7/glassfish/domains/domain1/ge
 [2023-05-28T18:30:56.104341+02:00] [GF 7.0.4] [INFO] [] [jakarta.enterprise.logging.stdout] [tid: _ThreadID=25 _ThreadName=GlassFish Shutdown Hook] [levelValue: 800] [[
   Completed shutdown of GlassFish runtime]]
 
+[2023-05-28T18:59:11.999259+02:00] [] [INFO] [NCLS-GFLAUNCHER-00005] [jakarta.enterprise.launcher] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  JVM invocation command line:
+C:\Program Files\Java\jdk-17.0.5\bin\java.exe
+-cp
+S:/IdeaProjects/TPO6_BJ_S24322/lib/glassfish7/glassfish/modules/glassfish.jar
+-DWALL_CLOCK_START=2023-05-28T16:59:02.685171600Z
+-XX:+UnlockDiagnosticVMOptions
+-XX:NewRatio=2
+-Xmx512m
+--add-opens=java.base/java.io=ALL-UNNAMED
+--add-opens=java.base/java.lang=ALL-UNNAMED
+--add-opens=java.base/java.util=ALL-UNNAMED
+--add-opens=java.base/sun.net.www.protocol.jrt=ALL-UNNAMED
+--add-opens=java.naming/javax.naming.spi=ALL-UNNAMED
+--add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+--add-opens=jdk.management/com.sun.management.internal=ALL-UNNAMED
+--add-exports=java.naming/com.sun.jndi.ldap=ALL-UNNAMED
+--add-exports=java.base/jdk.internal.vm.annotation=ALL-UNNAMED
+--add-opens=java.base/jdk.internal.vm.annotation=ALL-UNNAMED
+-javaagent:S:/IdeaProjects/TPO6_BJ_S24322/lib/glassfish7/glassfish/lib/monitor/flashlight-agent.jar
+-Djava.awt.headless=true
+-Djdk.corba.allowOutputStreamSubclass=true
+-Djdk.tls.rejectClientInitiatedRenegotiation=true
+-Djavax.xml.accessExternalSchema=all
+-Djava.security.policy=S:\IdeaProjects\TPO6_BJ_S24322\lib\glassfish7\glassfish\domains\domain1/config/server.policy
+-Djava.security.auth.login.config=S:\IdeaProjects\TPO6_BJ_S24322\lib\glassfish7\glassfish\domains\domain1/config/login.conf
+-Dcom.sun.enterprise.security.httpsOutboundKeyAlias=s1as
+-Djavax.net.ssl.keyStore=S:\IdeaProjects\TPO6_BJ_S24322\lib\glassfish7\glassfish\domains\domain1/config/keystore.jks
+-Djavax.net.ssl.trustStore=S:\IdeaProjects\TPO6_BJ_S24322\lib\glassfish7\glassfish\domains\domain1/config/cacerts.jks
+-Djdbc.drivers=org.apache.derby.jdbc.ClientDriver
+-DANTLR_USE_DIRECT_CLASS_LOADING=true
+-Dcom.sun.enterprise.config.config_environment_factory_class=com.sun.enterprise.config.serverbeans.AppserverConfigEnvironmentFactory
+-Dorg.glassfish.additionalOSGiBundlesToStart=org.apache.felix.shell,org.apache.felix.gogo.runtime,org.apache.felix.gogo.shell,org.apache.felix.gogo.command,org.apache.felix.shell.remote,org.apache.felix.fileinstall
+-Dosgi.shell.telnet.port=6666
+-Dosgi.shell.telnet.maxconn=1
+-Dosgi.shell.telnet.ip=127.0.0.1
+-Dgosh.args=--nointeractive
+-Dfelix.fileinstall.dir=S:\IdeaProjects\TPO6_BJ_S24322\lib\glassfish7\glassfish/modules/autostart/
+-Dfelix.fileinstall.poll=5000
+-Dfelix.fileinstall.log.level=2
+-Dfelix.fileinstall.bundles.new.start=true
+-Dfelix.fileinstall.bundles.startTransient=true
+-Dfelix.fileinstall.disableConfigSave=false
+-Dorg.glassfish.gmbal.no.multipleUpperBoundsException=true
+-Dcom.ctc.wstx.returnNullForDefaultNamespace=true
+-Djdk.attach.allowAttachSelf=true
+-Dcom.sun.aas.instanceRoot=S:\IdeaProjects\TPO6_BJ_S24322\lib\glassfish7\glassfish\domains\domain1
+-Dcom.sun.aas.installRoot=S:\IdeaProjects\TPO6_BJ_S24322\lib\glassfish7\glassfish
+-Djava.library.path=S:/IdeaProjects/TPO6_BJ_S24322/lib/glassfish7/glassfish/lib;C:/Program Files/Java/jdk-17.0.5/bin;C:/Windows/Sun/Java/bin;C:/Windows/System32;C:/Windows;D:/Programy/OracleDB/bin;C:/Python311/Scripts;C:/Python311;C:/Program Files/Common Files/Oracle/Java/javapath;C:/Python310/Scripts;C:/Python310;C:/Program Files (x86)/Common Files/Oracle/Java/javapath;C:/Windows/System32/wbem;C:/Windows/System32/WindowsPowerShell/v1.0;C:/Windows/System32/OpenSSH;C:/Program Files/PuTTY;C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common;C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR;C:/Program Files (x86)/GtkSharp/2.12/bin;D:/Git/cmd;C:/ProgramData/chocolatey/bin;C:/Program Files/Microsoft SQL Server/150/Tools/Binn;C:/Program Files/dotnet;D:/Programy/Redis;S:/Programy/Nodejs;C:/Program Files/Docker/Docker/resources/bin;C:/Program Files/Java/jdk1.8.0_231/bin;D:/Programy/Microsoft VS Code/bin;C:/Users/Jakub/AppData/Local/Microsoft/WindowsApps;C:/Program Files/heroku/bin;D:/Programy/CLion 2021.3.3/bin;D:/Programy/Leiningen;C:/Users/Jakub/AppData/Roaming/npm;C:/Users/Jakub/.dotnet/tools;C:/Users/Jakub/AppData/Local/GitHubDesktop/bin;S:/IdeaProjects/TPO6_BJ_S24322/lib/glassfish7/glassfish/bin
+com.sun.enterprise.glassfish.bootstrap.ASMain
+-upgrade
+false
+-domaindir
+S:/IdeaProjects/TPO6_BJ_S24322/lib/glassfish7/glassfish/domains/domain1
+-read-stdin
+true
+-asadmin-args
+--host,,,localhost,,,--port,,,4848,,,--secure=false,,,--terse=false,,,--echo=false,,,--interactive=false,,,start-domain,,,--verbose=false,,,--watchdog=false,,,--debug=false,,,--domaindir,,,S:\IdeaProjects\TPO6_BJ_S24322\lib\glassfish7\glassfish\domains,,,domain1
+-domainname
+domain1
+-instancename
+server
+-type
+DAS
+-verbose
+false
+-asadmin-classpath
+S:/IdeaProjects/TPO6_BJ_S24322/lib/glassfish7/glassfish/lib/client/appserver-cli.jar
+-debug
+false
+-asadmin-classname
+com.sun.enterprise.admin.cli.AdminMain]]
+
+[2023-05-28T18:59:31.560746+02:00] [GF 7.0.4] [INFO] [] [com.sun.enterprise.server.logging.LogManagerService] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Using property file: S:\IdeaProjects\TPO6_BJ_S24322\lib\glassfish7\glassfish\domains\domain1\config\logging.properties]]
+
+[2023-05-28T18:59:31.614747+02:00] [GF 7.0.4] [INFO] [NCLS-LOGGING-00009] [com.sun.enterprise.server.logging.LogManagerService] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Running GlassFish Version: Eclipse GlassFish 7.0.4 (branch: master, commit: 0dd0bbdcf0d1c711e8c226a01a1b8ed7f951c06f, timestamp: 2023-04-02T15:44:03Z)]]
+
+[2023-05-28T18:59:31.734748+02:00] [GF 7.0.4] [WARNING] [] [com.sun.logging.LogDomains] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 900] [[
+  Cannot find the resource bundle for the name com.sun.logging.enterprise.resource.resourceadapter for class com.sun.appserv.connectors.internal.api.AppSpecificConnectorClassLoaderUtil using classloader org.glassfish.main.connectors.internal-api [47]]]
+
+[2023-05-28T18:59:31.768747+02:00] [GF 7.0.4] [INFO] [NCLS-SECURITY-01115] [jakarta.enterprise.system.core.security] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Realm [admin-realm] of classtype [com.sun.enterprise.security.auth.realm.file.FileRealm] successfully created.]]
+
+[2023-05-28T18:59:31.770748+02:00] [GF 7.0.4] [INFO] [NCLS-SECURITY-01115] [jakarta.enterprise.system.core.security] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Realm [file] of classtype [com.sun.enterprise.security.auth.realm.file.FileRealm] successfully created.]]
+
+[2023-05-28T18:59:31.774747+02:00] [GF 7.0.4] [INFO] [NCLS-SECURITY-01115] [jakarta.enterprise.system.core.security] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Realm [certificate] of classtype [com.sun.enterprise.security.auth.realm.certificate.CertificateRealm] successfully created.]]
+
+[2023-05-28T18:59:31.778748+02:00] [GF 7.0.4] [WARNING] [] [com.sun.logging.LogDomains] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 900] [[
+  Cannot find the resource bundle for the name LogStrings for interface com.sun.appserv.connectors.internal.api.ConnectorRuntime using classloader org.glassfish.main.connectors.internal-api [47]]]
+
+[2023-05-28T18:59:31.917748+02:00] [GF 7.0.4] [INFO] [NCLS-CORE-00087] [jakarta.enterprise.system.core] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Grizzly Framework 4.0.0 started in: 23ms - bound to [/0.0.0.0:8080]]]
+
+[2023-05-28T18:59:31.928748+02:00] [GF 7.0.4] [INFO] [NCLS-CORE-00087] [jakarta.enterprise.system.core] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Grizzly Framework 4.0.0 started in: 1ms - bound to [/0.0.0.0:8181]]]
+
+[2023-05-28T18:59:31.932748+02:00] [GF 7.0.4] [INFO] [NCLS-CORE-00087] [jakarta.enterprise.system.core] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Grizzly Framework 4.0.0 started in: 1ms - bound to [/0.0.0.0:4848]]]
+
+[2023-05-28T18:59:31.955747+02:00] [GF 7.0.4] [INFO] [SEC-SVCS-00100] [jakarta.enterprise.security.services] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Authorization Service has successfully initialized.]]
+
+[2023-05-28T18:59:31.999747+02:00] [GF 7.0.4] [INFO] [] [org.glassfish.ha.store.spi.BackingStoreFactoryRegistry] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Registered org.glassfish.ha.store.adapter.cache.ShoalBackingStoreProxy for persistence-type = replicated in BackingStoreFactoryRegistry]]
+
+[2023-05-28T18:59:32.058748+02:00] [GF 7.0.4] [INFO] [NCLS-CORE-00087] [jakarta.enterprise.system.core] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Grizzly Framework 4.0.0 started in: 1ms - bound to [/0.0.0.0:3700]]]
+
+[2023-05-28T18:59:32.059748+02:00] [GF 7.0.4] [INFO] [NCLS-CORE-00017] [jakarta.enterprise.system.core] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Eclipse GlassFish 7.0.4 (branch: master, commit: 0dd0bbdcf0d1c711e8c226a01a1b8ed7f951c06f, timestamp: 2023-04-02T15:44:03Z) startup time: Embedded (19,384 ms), startup services (528 ms), total (19,912 ms)]]
+
+[2023-05-28T18:59:32.059748+02:00] [GF 7.0.4] [INFO] [NCLS-CORE-00018] [jakarta.enterprise.system.core] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Total startup time including CLI: 29,374 ms]]
+
+[2023-05-28T18:59:32.161259+02:00] [GF 7.0.4] [INFO] [NCLS-CORE-00087] [jakarta.enterprise.system.core] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Grizzly Framework 4.0.0 started in: 2ms - bound to [/0.0.0.0:7676]]]
+
+[2023-05-28T18:59:33.451812+02:00] [GF 7.0.4] [INFO] [NCLS-SECURITY-01002] [jakarta.enterprise.system.core.security] [tid: _ThreadID=72 _ThreadName=admin-listener(4)] [levelValue: 800] [[
+  Java security manager is disabled.]]
+
+[2023-05-28T18:59:33.452812+02:00] [GF 7.0.4] [INFO] [NCLS-SECURITY-01010] [jakarta.enterprise.system.core.security] [tid: _ThreadID=72 _ThreadName=admin-listener(4)] [levelValue: 800] [[
+  Entering Security Startup Service.]]
+
+[2023-05-28T18:59:33.454812+02:00] [GF 7.0.4] [INFO] [NCLS-SECURITY-01143] [jakarta.enterprise.system.core.security] [tid: _ThreadID=72 _ThreadName=admin-listener(4)] [levelValue: 800] [[
+  Loading policy provider org.glassfish.exousia.modules.locked.SimplePolicyProvider.]]
+
+[2023-05-28T18:59:33.468812+02:00] [GF 7.0.4] [INFO] [NCLS-SECURITY-01011] [jakarta.enterprise.system.core.security] [tid: _ThreadID=72 _ThreadName=admin-listener(4)] [levelValue: 800] [[
+  Security Service(s) started successfully.]]
+
+[2023-05-28T18:59:33.563812+02:00] [GF 7.0.4] [INFO] [AS-WEB-GLUE-00198] [jakarta.enterprise.web] [tid: _ThreadID=72 _ThreadName=admin-listener(4)] [levelValue: 800] [[
+  Created HTTP listener http-listener-1 on host/port 0.0.0.0:8080]]
+
+[2023-05-28T18:59:33.564812+02:00] [GF 7.0.4] [INFO] [AS-WEB-GLUE-00198] [jakarta.enterprise.web] [tid: _ThreadID=72 _ThreadName=admin-listener(4)] [levelValue: 800] [[
+  Created HTTP listener http-listener-2 on host/port 0.0.0.0:8181]]
+
+[2023-05-28T18:59:33.565812+02:00] [GF 7.0.4] [INFO] [AS-WEB-GLUE-00198] [jakarta.enterprise.web] [tid: _ThreadID=72 _ThreadName=admin-listener(4)] [levelValue: 800] [[
+  Created HTTP listener admin-listener on host/port 0.0.0.0:4848]]
+
+[2023-05-28T18:59:33.576812+02:00] [GF 7.0.4] [INFO] [AS-WEB-GLUE-00200] [jakarta.enterprise.web] [tid: _ThreadID=72 _ThreadName=admin-listener(4)] [levelValue: 800] [[
+  Created virtual server server]]
+
+[2023-05-28T18:59:33.578812+02:00] [GF 7.0.4] [INFO] [AS-WEB-GLUE-00200] [jakarta.enterprise.web] [tid: _ThreadID=72 _ThreadName=admin-listener(4)] [levelValue: 800] [[
+  Created virtual server __asadmin]]
+
+[2023-05-28T18:59:33.671811+02:00] [GF 7.0.4] [INFO] [AS-WEB-CORE-00306] [jakarta.enterprise.web.core] [tid: _ThreadID=72 _ThreadName=admin-listener(4)] [levelValue: 800] [[
+  Setting JAAS app name glassfish-web]]
+
+[2023-05-28T18:59:33.671811+02:00] [GF 7.0.4] [INFO] [AS-WEB-GLUE-00201] [jakarta.enterprise.web] [tid: _ThreadID=72 _ThreadName=admin-listener(4)] [levelValue: 800] [[
+  Virtual server server loaded default web module ]]
+
+[2023-05-28T18:59:33.945812+02:00] [GF 7.0.4] [SEVERE] [] [org.glassfish.apf] [tid: _ThreadID=72 _ThreadName=admin-listener(4)] [levelValue: 1000] [[
+  The servlet 'getBooksServlet' has implementation 'pl.pijok.tpo6_bj_s24322.book.endpoint.GetBooksServlet' in xml. It does not match with 'pl.pijok.tpo6_bj_s24322.book.endpoint.FindBookServlet' from annotation @jakarta.servlet.annotation.WebServlet.. Related annotation information: Annotation [@jakarta.servlet.annotation.WebServlet(loadOnStartup=-1, initParams={}, urlPatterns={}, displayName="", name="getBooksServlet", largeIcon="", description="", asyncSupported=false, smallIcon="", value={"/api/find-books"})] on annotated element [class pl.pijok.tpo6_bj_s24322.book.endpoint.FindBookServlet] of type [TYPE]
+ symbol: TYPE location: class pl.pijok.tpo6_bj_s24322.book.endpoint.FindBookServlet
+
+]]
+
+[2023-05-28T18:59:33.945812+02:00] [GF 7.0.4] [SEVERE] [] [jakarta.enterprise.system.tools.deployment.dol] [tid: _ThreadID=72 _ThreadName=admin-listener(4)] [levelValue: 1000] [[
+  Annotations processing failed for file:/S:/IdeaProjects/TPO6_BJ_S24322/target/TPO6_BJ_S24322-1.0-SNAPSHOT/]]
+
+[2023-05-28T18:59:34.018324+02:00] [GF 7.0.4] [INFO] [] [org.jboss.weld.Version] [tid: _ThreadID=72 _ThreadName=admin-listener(4)] [levelValue: 800] [[
+  WELD-000900: 5.1.0 (Final)]]
+
+[2023-05-28T18:59:34.371325+02:00] [GF 7.0.4] [INFO] [] [org.jboss.weld.Event] [tid: _ThreadID=72 _ThreadName=admin-listener(4)] [levelValue: 800] [[
+  WELD-000411: Observer method [BackedAnnotatedMethod] org.glassfish.sse.impl.ServerSentEventCdiExtension.processAnnotatedType(@Observes ProcessAnnotatedType<T>, BeanManager) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.]]
+
+[2023-05-28T18:59:34.378324+02:00] [GF 7.0.4] [INFO] [] [org.jboss.weld.Event] [tid: _ThreadID=72 _ThreadName=admin-listener(4)] [levelValue: 800] [[
+  WELD-000411: Observer method [BackedAnnotatedMethod] public org.glassfish.jms.injection.JMSCDIExtension.processAnnotatedType(@Observes ProcessAnnotatedType<T>) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.]]
+
+[2023-05-28T18:59:34.378324+02:00] [GF 7.0.4] [INFO] [] [org.jboss.weld.Event] [tid: _ThreadID=72 _ThreadName=admin-listener(4)] [levelValue: 800] [[
+  WELD-000411: Observer method [BackedAnnotatedMethod] public org.glassfish.jersey.ext.cdi1x.internal.ProcessAllAnnotatedTypes.processAnnotatedType(@Observes ProcessAnnotatedType<?>, BeanManager) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.]]
+
+[2023-05-28T18:59:35.002325+02:00] [GF 7.0.4] [INFO] [] [org.glassfish.soteria.servlet.SamRegistrationInstaller] [tid: _ThreadID=72 _ThreadName=admin-listener(4)] [levelValue: 800] [[
+  Initializing Soteria 3.0.2 for context '/TPO6_BJ_S24322-1.0-SNAPSHOT']]
+
+[2023-05-28T18:59:35.024325+02:00] [GF 7.0.4] [INFO] [] [jakarta.enterprise.logging.stdout] [tid: _ThreadID=72 _ThreadName=admin-listener(4)] [levelValue: 800] [[
+  Setting connection props]]
+
+[2023-05-28T18:59:35.032324+02:00] [GF 7.0.4] [SEVERE] [] [jakarta.enterprise.logging.stderr] [tid: _ThreadID=72 _ThreadName=admin-listener(4)] [levelValue: 1000] [[
+  SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".]]
+
+[2023-05-28T18:59:35.032324+02:00] [GF 7.0.4] [SEVERE] [] [jakarta.enterprise.logging.stderr] [tid: _ThreadID=72 _ThreadName=admin-listener(4)] [levelValue: 1000] [[
+  SLF4J: Defaulting to no-operation (NOP) logger implementation]]
+
+[2023-05-28T18:59:35.032324+02:00] [GF 7.0.4] [SEVERE] [] [jakarta.enterprise.logging.stderr] [tid: _ThreadID=72 _ThreadName=admin-listener(4)] [levelValue: 1000] [[
+  SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.]]
+
+[2023-05-28T18:59:35.659028+02:00] [GF 7.0.4] [INFO] [AS-WEB-GLUE-00172] [jakarta.enterprise.web] [tid: _ThreadID=72 _ThreadName=admin-listener(4)] [levelValue: 800] [[
+  Loading application [TPO6_BJ_S24322-1.0-SNAPSHOT] at [/TPO6_BJ_S24322-1.0-SNAPSHOT]]]
+
+[2023-05-28T18:59:35.702083+02:00] [GF 7.0.4] [INFO] [] [jakarta.enterprise.system.core] [tid: _ThreadID=72 _ThreadName=admin-listener(4)] [levelValue: 800] [[
+  TPO6_BJ_S24322-1.0-SNAPSHOT was successfully deployed in 2,984 milliseconds.]]
+
+[2023-05-28T18:59:41.313433+02:00] [GF 7.0.4] [INFO] [NCLS-JMX-00005] [jakarta.enterprise.system.jmx] [tid: _ThreadID=89 _ThreadName=Thread-7] [levelValue: 800] [[
+  JMXStartupService has started JMXConnector on JMXService URL service:jmx:rmi://DESKTOP-7EPAM5Q:8686/jndi/rmi://DESKTOP-7EPAM5Q:8686/jmxrmi]]
+
+[2023-05-28T19:00:07.901620+02:00] [GF 7.0.4] [INFO] [] [jakarta.enterprise.logging.stdout] [tid: _ThreadID=56 _ThreadName=http-listener-1(2)] [levelValue: 800] [[
+  CREATED SELECT QUERY: SELECT * FROM books WHERE author LIKE '%Rowling%';]]
+
+[2023-05-28T19:00:09.298599+02:00] [GF 7.0.4] [INFO] [] [jakarta.enterprise.logging.stdout] [tid: _ThreadID=58 _ThreadName=http-listener-1(4)] [levelValue: 800] [[
+  CREATED SELECT QUERY: SELECT * FROM books WHERE author LIKE '%Rowling%';]]
+
+[2023-05-28T19:00:30.476357+02:00] [GF 7.0.4] [INFO] [] [jakarta.enterprise.logging.stdout] [tid: _ThreadID=56 _ThreadName=http-listener-1(2)] [levelValue: 800] [[
+  CREATED SELECT QUERY: SELECT * FROM books WHERE author LIKE '%Tolkien%';]]
+
+[2023-05-28T19:00:45.682169+02:00] [GF 7.0.4] [INFO] [] [jakarta.enterprise.logging.stdout] [tid: _ThreadID=58 _ThreadName=http-listener-1(4)] [levelValue: 800] [[
+  CREATED SELECT QUERY: SELECT * FROM books WHERE title LIKE '%Hobbit%';]]
+
+[2023-05-28T19:00:51.700594+02:00] [GF 7.0.4] [INFO] [] [jakarta.enterprise.logging.stdout] [tid: _ThreadID=56 _ThreadName=http-listener-1(2)] [levelValue: 800] [[
+  CREATED SELECT QUERY: SELECT * FROM books;]]
+
+[2023-05-28T19:01:01.230367+02:00] [GF 7.0.4] [INFO] [] [jakarta.enterprise.logging.stdout] [tid: _ThreadID=70 _ThreadName=admin-listener(2)] [levelValue: 800] [[
+  Destroy!]]
+
+[2023-05-28T19:01:01.240356+02:00] [GF 7.0.4] [INFO] [] [org.glassfish.web.loader.WebappClassLoader] [tid: _ThreadID=70 _ThreadName=admin-listener(2)] [levelValue: 800] [[
+  close(), this:
+org.glassfish.web.loader.WebappClassLoader@53b84e40[name=/TPO6_BJ_S24322-1.0-SNAPSHOT], urls=[
+file:/S:/IdeaProjects/TPO6_BJ_S24322/target/TPO6_BJ_S24322-1.0-SNAPSHOT/WEB-INF/classes/
+file:/S:/IdeaProjects/TPO6_BJ_S24322/target/TPO6_BJ_S24322-1.0-SNAPSHOT/WEB-INF/lib/cdi-api-1.2.jar
+file:/S:/IdeaProjects/TPO6_BJ_S24322/target/TPO6_BJ_S24322-1.0-SNAPSHOT/WEB-INF/lib/checker-qual-3.31.0.jar
+file:/S:/IdeaProjects/TPO6_BJ_S24322/target/TPO6_BJ_S24322-1.0-SNAPSHOT/WEB-INF/lib/commons-collections4-4.4.jar
+file:/S:/IdeaProjects/TPO6_BJ_S24322/target/TPO6_BJ_S24322-1.0-SNAPSHOT/WEB-INF/lib/commons-lang3-3.12.0.jar
+file:/S:/IdeaProjects/TPO6_BJ_S24322/target/TPO6_BJ_S24322-1.0-SNAPSHOT/WEB-INF/lib/commons-text-1.10.0.jar
+file:/S:/IdeaProjects/TPO6_BJ_S24322/target/TPO6_BJ_S24322-1.0-SNAPSHOT/WEB-INF/lib/gson-2.10.1.jar
+file:/S:/IdeaProjects/TPO6_BJ_S24322/target/TPO6_BJ_S24322-1.0-SNAPSHOT/WEB-INF/lib/guava-18.0.jar
+file:/S:/IdeaProjects/TPO6_BJ_S24322/target/TPO6_BJ_S24322-1.0-SNAPSHOT/WEB-INF/lib/HikariCP-5.0.1.jar
+file:/S:/IdeaProjects/TPO6_BJ_S24322/target/TPO6_BJ_S24322-1.0-SNAPSHOT/WEB-INF/lib/javax.activation-api-1.2.0.jar
+file:/S:/IdeaProjects/TPO6_BJ_S24322/target/TPO6_BJ_S24322-1.0-SNAPSHOT/WEB-INF/lib/javax.inject-1.jar
+file:/S:/IdeaProjects/TPO6_BJ_S24322/target/TPO6_BJ_S24322-1.0-SNAPSHOT/WEB-INF/lib/jaxb-api-2.3.1.jar
+file:/S:/IdeaProjects/TPO6_BJ_S24322/target/TPO6_BJ_S24322-1.0-SNAPSHOT/WEB-INF/lib/jboss-annotations-api_1.2_spec-1.0.0.Final.jar
+file:/S:/IdeaProjects/TPO6_BJ_S24322/target/TPO6_BJ_S24322-1.0-SNAPSHOT/WEB-INF/lib/jboss-classfilewriter-1.1.2.Final.jar
+file:/S:/IdeaProjects/TPO6_BJ_S24322/target/TPO6_BJ_S24322-1.0-SNAPSHOT/WEB-INF/lib/jboss-el-api_3.0_spec-1.0.0.Alpha1.jar
+file:/S:/IdeaProjects/TPO6_BJ_S24322/target/TPO6_BJ_S24322-1.0-SNAPSHOT/WEB-INF/lib/jboss-interceptors-api_1.2_spec-1.0.0.Final.jar
+file:/S:/IdeaProjects/TPO6_BJ_S24322/target/TPO6_BJ_S24322-1.0-SNAPSHOT/WEB-INF/lib/jboss-logging-3.2.1.Final.jar
+file:/S:/IdeaProjects/TPO6_BJ_S24322/target/TPO6_BJ_S24322-1.0-SNAPSHOT/WEB-INF/lib/liquibase-core-4.20.0.jar
+file:/S:/IdeaProjects/TPO6_BJ_S24322/target/TPO6_BJ_S24322-1.0-SNAPSHOT/WEB-INF/lib/opencsv-5.7.1.jar
+file:/S:/IdeaProjects/TPO6_BJ_S24322/target/TPO6_BJ_S24322-1.0-SNAPSHOT/WEB-INF/lib/postgresql-42.6.0.jar
+file:/S:/IdeaProjects/TPO6_BJ_S24322/target/TPO6_BJ_S24322-1.0-SNAPSHOT/WEB-INF/lib/slf4j-api-2.0.0-alpha1.jar
+file:/S:/IdeaProjects/TPO6_BJ_S24322/target/TPO6_BJ_S24322-1.0-SNAPSHOT/WEB-INF/lib/snakeyaml-1.33.jar
+file:/S:/IdeaProjects/TPO6_BJ_S24322/target/TPO6_BJ_S24322-1.0-SNAPSHOT/WEB-INF/lib/weld-api-2.3.SP2.jar
+file:/S:/IdeaProjects/TPO6_BJ_S24322/target/TPO6_BJ_S24322-1.0-SNAPSHOT/WEB-INF/lib/weld-core-impl-2.3.4.Final.jar
+file:/S:/IdeaProjects/TPO6_BJ_S24322/target/TPO6_BJ_S24322-1.0-SNAPSHOT/WEB-INF/lib/weld-environment-common-2.3.4.Final.jar
+file:/S:/IdeaProjects/TPO6_BJ_S24322/target/TPO6_BJ_S24322-1.0-SNAPSHOT/WEB-INF/lib/weld-probe-core-2.3.4.Final.jar
+file:/S:/IdeaProjects/TPO6_BJ_S24322/target/TPO6_BJ_S24322-1.0-SNAPSHOT/WEB-INF/lib/weld-se-core-2.3.4.Final.jar
+file:/S:/IdeaProjects/TPO6_BJ_S24322/target/TPO6_BJ_S24322-1.0-SNAPSHOT/WEB-INF/lib/weld-spi-2.3.SP2.jar
+file:/S:/IdeaProjects/TPO6_BJ_S24322/lib/glassfish7/glassfish/domains/domain1/generated/ejb/TPO6_BJ_S24322-1.0-SNAPSHOT/
+file:/S:/IdeaProjects/TPO6_BJ_S24322/lib/glassfish7/glassfish/domains/domain1/generated/TPO6_BJ_S24322-1.0-SNAPSHOT/
+][delegate=true, context=/TPO6_BJ_S24322-1.0-SNAPSHOT, status=RUNNING, antiJARLocking=false, securityManager=false, packageDefinitionSecurityEnabled=false, repositories=RepositoryManager[WEB-INF/classes/], notFound.size=43, pathTimestamps.size=55, resourceEntryCache.size=419]]]
+
+[2023-05-28T19:01:01.884400+02:00] [GF 7.0.4] [INFO] [NCLS-REST-00001] [jakarta.enterprise.admin.rest] [tid: _ThreadID=73 _ThreadName=admin-listener(5)] [levelValue: 800] [[
+  Listening to REST requests at context: /command/domain.]]
+
+[2023-05-28T19:01:01.942513+02:00] [GF 7.0.4] [INFO] [NCLS-CORE-00092] [jakarta.enterprise.system.core] [tid: _ThreadID=232 _ThreadName=Thread-44] [levelValue: 800] [[
+  Server shutdown initiated]]
+
+[2023-05-28T19:01:01.944514+02:00] [GF 7.0.4] [INFO] [] [jakarta.enterprise.logging.stdout] [tid: _ThreadID=232 _ThreadName=Thread-44] [levelValue: 800] [[
+  FileMonitoring shutdown]]
+
+[2023-05-28T19:01:01.948515+02:00] [GF 7.0.4] [INFO] [NCLS-JMX-00002] [jakarta.enterprise.system.jmx] [tid: _ThreadID=232 _ThreadName=Thread-44] [levelValue: 800] [[
+  JMXStartupService: Stopped JMXConnectorServer: null]]
+
+[2023-05-28T19:01:01.948515+02:00] [GF 7.0.4] [INFO] [NCLS-JMX-00001] [jakarta.enterprise.system.jmx] [tid: _ThreadID=232 _ThreadName=Thread-44] [levelValue: 800] [[
+  JMXStartupService and JMXConnectors have been shut down.]]
+
+[2023-05-28T19:01:01.970998+02:00] [GF 7.0.4] [INFO] [] [jakarta.enterprise.logging.stdout] [tid: _ThreadID=235 _ThreadName=RunLevelControllerThread-1685293261951] [levelValue: 800] [[
+  JdbcRuntimeExtension,  getAllSystemRAResourcesAndPools = [GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool]]]
+
+[2023-05-28T19:01:01.975997+02:00] [GF 7.0.4] [INFO] [NCLS-CORE-00013] [jakarta.enterprise.system.core] [tid: _ThreadID=232 _ThreadName=Thread-44] [levelValue: 800] [[
+  Shutdown procedure finished]]
+
+[2023-05-28T19:01:01.976997+02:00] [GF 7.0.4] [INFO] [] [jakarta.enterprise.logging.stdout] [tid: _ThreadID=25 _ThreadName=GlassFish Shutdown Hook] [levelValue: 800] [[
+  Completed shutdown of GlassFish runtime]]
+

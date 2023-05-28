@@ -49,7 +49,7 @@ public abstract class Repository {
                 Field entityField = entity.getClass().getDeclaredField(criteriaField.getName());
                 entityField.setAccessible(true);
 
-                sql.append(entityField.getAnnotation(Column.class).name()).append(" = '").append(criteriaField.get(searchCriteria)).append("'");
+                sql.append(entityField.getAnnotation(Column.class).name()).append(" LIKE '%").append(criteriaField.get(searchCriteria)).append("%'");
 
                 filledEntries++;
             } catch (IllegalAccessException | NoSuchFieldException e) {
