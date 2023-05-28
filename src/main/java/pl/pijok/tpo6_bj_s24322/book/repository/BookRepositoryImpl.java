@@ -3,6 +3,7 @@ package pl.pijok.tpo6_bj_s24322.book.repository;
 import jakarta.inject.Inject;
 import pl.pijok.tpo6_bj_s24322.DataSource;
 import pl.pijok.tpo6_bj_s24322.book.dto.BookDto;
+import pl.pijok.tpo6_bj_s24322.book.dto.BookDtoMapper;
 import pl.pijok.tpo6_bj_s24322.book.dto.BookSearchCriteria;
 import pl.pijok.tpo6_bj_s24322.book.entity.BookEntity;
 import pl.pijok.tpo6_bj_s24322.lib.Mapper;
@@ -12,12 +13,13 @@ import pl.pijok.tpo6_bj_s24322.lib.SearchCriteria;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
 public class BookRepositoryImpl extends Repository implements BookRepository {
 
-    private static final BookEntity entity = new BookEntity(1, "title", "author", "desc");
+    private static final BookEntity entity = new BookEntity(1, "Title", "Author", "Desc", "ISBN", LocalDate.now(), 1, LocalDate.now());
 
    /* private static final String INIT_TABLES = "CREATE TABLE IF NOT EXISTS pjatk.books (" +
             "book_id serial primary key," +
@@ -28,17 +30,17 @@ public class BookRepositoryImpl extends Repository implements BookRepository {
 
     private static final String INIT_TABLES = "CREATE TABLE IF NOT EXISTS pjatk.books (" +
             "book_id serial primary key," +
-            "title varchar(32) not null," +
+            "title varchar(64) not null," +
             "author varchar(64) not null," +
             "description varchar(512)," +
-            "isbn varchar(12) not null," +
+            "isbn varchar(13) not null," +
             "publishDate date," +
             "rating integer," +
             "creationDate date not null" +
             ");";
 
     @Inject
-    private Mapper mapper;
+    private BookDtoMapper mapper;
 
     @Override
     public List<BookDto> getBooks() {
@@ -59,7 +61,7 @@ public class BookRepositoryImpl extends Repository implements BookRepository {
             return null;
         }
 
-        List<BookDto> temp = mapper.mapResultSet(resultSet, entity, BookDto.class);;
+        List<BookDto> temp = mapper.map(resultSet);
         return temp.size() > 0 ? Optional.of(temp.get(0)) : Optional.empty();
     }
 
@@ -103,6 +105,6 @@ public class BookRepositoryImpl extends Repository implements BookRepository {
             return null;
         }
 
-        return mapper.mapResultSet(resultSet, entity, BookDto.class);
+        return mapper.map(resultSet);
     }
 }

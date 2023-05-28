@@ -7,6 +7,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import pl.pijok.tpo6_bj_s24322.book.dto.BookDtoMapper;
 import pl.pijok.tpo6_bj_s24322.lib.Mapper;
 import pl.pijok.tpo6_bj_s24322.lib.SearchCriteria;
 import pl.pijok.tpo6_bj_s24322.book.service.BookService;
@@ -14,13 +15,13 @@ import pl.pijok.tpo6_bj_s24322.book.service.BookService;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet(name = "searchBooksServlet", value = "/search-books")
+@WebServlet(name = "searchBooksServlet", value = "/api/search-books")
 public class SearchBooksServlet extends HttpServlet {
 
     @Inject
     private BookService service;
     @Inject
-    private Mapper mapper;
+    private BookDtoMapper mapper;
 
     private Gson gson = new Gson();
 

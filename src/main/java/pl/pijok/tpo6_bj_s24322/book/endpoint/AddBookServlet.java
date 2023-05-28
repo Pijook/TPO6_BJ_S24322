@@ -15,7 +15,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet(name = "addBookServlet", value = "/add-book")
+@WebServlet(name = "addBookServlet", value = "/api/add-book")
 public class AddBookServlet extends HttpServlet {
 
     @Inject
@@ -40,7 +40,6 @@ public class AddBookServlet extends HttpServlet {
         else{
             response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
         }
-
     }
 
 

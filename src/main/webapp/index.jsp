@@ -4,7 +4,7 @@
 <head>
     <title>JSP - Hello World</title>
 </head>
-<body>
+<body onload="moveToMainSite()">
 <h1><%= "Hello World!" %>
 </h1>
 <br/>
@@ -14,5 +14,10 @@
     <a href="http://localhost:8080/TPO6_BJ_S24322-1.0-SNAPSHOT/findBook">Find by id</a>
     <a href="http://localhost:8080/TPO6_BJ_S24322-1.0-SNAPSHOT/addBook">Add</a>
 </div>
+<script>
+    function moveToMainSite() {
+        window.location.href = "http://localhost:8080/TPO6_BJ_S24322-1.0-SNAPSHOT/searchBooks"
+    }
+</script>
 </body>
 </html>

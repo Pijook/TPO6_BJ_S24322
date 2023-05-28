@@ -37,7 +37,11 @@ public class Mapper {
                 .build();
     }
 
-    public List mapResultSet(ResultSet set, Entity entity, Class resultClass) {
+    public List map(ResultSet set) {
+        return new ArrayList();
+    }
+
+/*    public List mapResultSet(ResultSet set, Entity entity, Class resultClass) {
         List resultList = new ArrayList();
 
         try{
@@ -63,9 +67,9 @@ public class Mapper {
         }
 
         return resultList;
-    }
+    }*/
 
-    private String getValueFromParameter(HttpServletRequest request, String parameter) {
+    protected String getValueFromParameter(HttpServletRequest request, String parameter) {
         return request.getParameter(parameter) != null ? request.getParameter(parameter) : null;
     }
 

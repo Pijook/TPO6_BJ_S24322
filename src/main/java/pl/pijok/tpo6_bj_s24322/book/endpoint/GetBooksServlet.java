@@ -13,7 +13,7 @@ import pl.pijok.tpo6_bj_s24322.book.service.BookService;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet(name = "getBooksServlet", value = "/get-books")
+@WebServlet(name = "getBooksServlet", value = "/api/get-books")
 public class GetBooksServlet extends HttpServlet {
 
     @Inject

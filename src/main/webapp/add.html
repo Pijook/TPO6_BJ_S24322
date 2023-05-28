@@ -19,16 +19,16 @@
     </div>
     <div class="nav-item-box">
         <div class="nav-item">
-            <a href="http://localhost:8080/TPO6_BJ_S24322-1.0-SNAPSHOT/searchBooks" class="navbar-link">Search</a>
+            <a href="http://localhost:8080/TPO6_BJ_S24322-1.0-SNAPSHOT/searchBooks" class="navbar-link">Szukaj</a>
             <div class="navbar-underline"></div>
         </div>
         <div class="nav-item">
-            <a href="http://localhost:8080/TPO6_BJ_S24322-1.0-SNAPSHOT/findBook" class="navbar-link">Find by id</a>
+            <a href="http://localhost:8080/TPO6_BJ_S24322-1.0-SNAPSHOT/findBook" class="navbar-link">Szukaj po id</a>
+            <div class="navbar-underline"></div>
+        </div>
+        <div class="nav-item">
+            <a href="http://localhost:8080/TPO6_BJ_S24322-1.0-SNAPSHOT/addBook" class="navbar-link">Dodaj</a>
             <div class="navbar-underline selected"></div>
-        </div>
-        <div class="nav-item">
-            <a href="http://localhost:8080/TPO6_BJ_S24322-1.0-SNAPSHOT/addBook" class="navbar-link">Add</a>
-            <div class="navbar-underline"></div>
         </div>
     </div>
 </div>
@@ -45,8 +45,14 @@
             <input type="text" name="author" id="author" class="text-input" placeholder="Autor. . ." /> <br>
             <input type="text" name="title" id="title" class="text-input" placeholder="Tytuł. . ." /> <br>
             <input type="text" name="description" id="description" class="text-input" placeholder="Opis. . ." /> <br>
+            <input type="text" name="isbn" id="isbn" class="text-input" placeholder="ISBN. . ." /> <br>
+            <input type="date" name="publishDate" id="publishDate" class="text-input" placeholder="Data publikacji. . ." /> <br>
+            <input type="number" name="rating" id="rating" class="text-input" placeholder="Ocena. . ." min="1" max="5"/> <br>
+            <div class="add-result-text" id="add-result-text"></div>
             <button type="button" class="button" onclick="addBook()">Dodaj</button> <br>
         </form>
+
+
     </div>
     <div id="add-status"></div>
     <div class="right-container">

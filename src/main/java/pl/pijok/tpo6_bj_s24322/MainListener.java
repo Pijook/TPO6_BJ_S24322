@@ -20,12 +20,17 @@ public class MainListener implements ServletContextListener {
     @Inject
     private BookRepository repository;
 
+    @Inject
+    private BaseRunner baseRunner;
+
     @Override
     public void contextInitialized(ServletContextEvent sce) {
         ServletContextListener.super.contextInitialized(sce);
         DataSource.initProps();
 
         repository.initTable();
+
+        baseRunner.start();
 
     }
 

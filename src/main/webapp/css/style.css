@@ -20,6 +20,39 @@ body {
     font-size: 1.25rem;
 }
 
+.add-result-text {
+    margin-left: 20%;
+    font-family: Arial, serif;
+    font-size: 1.25rem;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.more-search-fields-button {
+    width: 50%;
+    margin-left: 20%;
+    padding-left: 0.5rem;
+    margin-bottom: 3%;
+    cursor: pointer;
+}
+
+.more-search-criteria {
+
+}
+
+.more-search-fields-line {
+    width: 100%;
+    height: 0.25rem;
+    border-radius: 1rem;
+    background-color: rgba(242, 208, 114, 0.56);
+}
+
+.more-search-fields-text {
+    margin-top: 1%;
+    font-family: Arial, serif;
+    float: right;
+}
+
 .hype-text {
     font-family: Arial, serif;
     margin-left: 20%;
@@ -39,26 +72,7 @@ body {
     border-radius: 1rem;
     margin-left: 32%;
     font-size: 1.25rem;
-}
-
-.jebane-kolko1 {
-    position: absolute;
-    height: 30rem;
-    width: 30rem;
-    border-radius: 50rem;
-    background-color: #FAE9BC;
-    right: -5%;
-    top: -25%
-}
-
-.jebane-kolko2 {
-    position: absolute;
-    height: 30rem;
-    width: 30rem;
-    border-radius: 50rem;
-    background-color: #FAE9BC;
-    right: 10%;
-    top: -35%
+    margin-bottom: 2%;
 }
 
 .nav-bar {
@@ -179,10 +193,19 @@ table, th, td {
     width: 90%;
     background-color: #F2D072;
     border-radius: 1rem;
-    height: 6rem;
+    height: 7rem;
     padding-left: 5%;
     margin-top: 1%;
     padding-right: 5%;
+}
+
+.more-png {
+    width: 5%;
+    height: 5%;
+}
+
+.more-results {
+    height: 12rem;
 }
 
 .item-left-size {

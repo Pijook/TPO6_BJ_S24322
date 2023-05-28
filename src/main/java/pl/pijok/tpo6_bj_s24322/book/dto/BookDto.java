@@ -5,9 +5,11 @@ import pl.pijok.tpo6_bj_s24322.annotations.Column;
 import pl.pijok.tpo6_bj_s24322.lib.Dto;
 
 import java.time.LocalDate;
+import java.util.Date;
 
 @Getter
 @ToString
+@AllArgsConstructor
 public class BookDto extends Dto {
 
     public BookDto() {
@@ -18,8 +20,10 @@ public class BookDto extends Dto {
     private String author;
     private String description;
     private String isbn;
-    private LocalDate publishDate;
+    private Date publishDate;
     private int rating;
-    private LocalDate creationDate;
+
+    @Setter
+    private Date creationDate;
 
 }
