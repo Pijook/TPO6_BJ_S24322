@@ -1,11 +1,13 @@
 package pl.pijok.tpo6_bj_s24322.book.dto;
 
 import lombok.Builder;
+import lombok.Getter;
 import pl.pijok.tpo6_bj_s24322.lib.SearchCriteria;
 
 import java.time.LocalDate;
 
 @Builder
+@Getter
 public class BookSearchCriteria extends SearchCriteria {
 
     private Integer bookId;

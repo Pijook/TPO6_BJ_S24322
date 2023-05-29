@@ -9,7 +9,7 @@ import java.util.List;
 
 public abstract class Repository {
 
-    public String createSelectSql(SearchCriteria searchCriteria, Entity entity) {
+    public String createSelectSql(SearchCriteria searchCriteria, Entity entity, boolean exact) {
         StringBuilder sql = new StringBuilder("SELECT * FROM " + entity.getClass().getAnnotation(Table.class).tableName());
 
         boolean allFieldsEmpty = true;
@@ -49,7 +49,18 @@ public abstract class Repository {
                 Field entityField = entity.getClass().getDeclaredField(criteriaField.getName());
                 entityField.setAccessible(true);
 
-                sql.append(entityField.getAnnotation(Column.class).name()).append(" LIKE '%").append(criteriaField.get(searchCriteria)).append("%'");
+                String outer = "'";
+                if(criteriaField.get(searchCriteria) instanceof Integer) {
+                    outer = "";
+                }
+
+                if(exact) {
+                    sql.append(entityField.getAnnotation(Column.class).name()).append(" = " + outer).append(criteriaField.get(searchCriteria)).append(outer);
+                }
+                else{
+                    sql.append(entityField.getAnnotation(Column.class).name()).append(" LIKE '%").append(criteriaField.get(searchCriteria)).append("%'");
+                }
+
 
                 filledEntries++;
             } catch (IllegalAccessException | NoSuchFieldException e) {

@@ -73,6 +73,7 @@ body {
     margin-left: 32%;
     font-size: 1.25rem;
     margin-bottom: 2%;
+    cursor: pointer;
 }
 
 .nav-bar {
@@ -202,6 +203,10 @@ table, th, td {
 .more-png {
     width: 5%;
     height: 5%;
+}
+
+.more-results-button {
+    cursor: pointer;
 }
 
 .more-results {

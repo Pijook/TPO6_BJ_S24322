@@ -30,7 +30,7 @@ public class MainListener implements ServletContextListener {
 
         repository.initTable();
 
-        baseRunner.start();
+        //baseRunner.start();
 
     }
 

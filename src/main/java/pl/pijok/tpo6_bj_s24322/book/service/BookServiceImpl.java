@@ -1,6 +1,7 @@
 package pl.pijok.tpo6_bj_s24322.book.service;
 
 import jakarta.inject.Inject;
+import pl.pijok.tpo6_bj_s24322.book.dto.BookSearchCriteria;
 import pl.pijok.tpo6_bj_s24322.lib.SearchCriteria;
 import pl.pijok.tpo6_bj_s24322.book.dto.BookDto;
 import pl.pijok.tpo6_bj_s24322.book.repository.BookRepository;
@@ -34,5 +35,7 @@ public class BookServiceImpl implements BookService {
         bookDto.setCreationDate(new Date());
         return repository.addBook(bookDto);
     }
+
+
 
 }

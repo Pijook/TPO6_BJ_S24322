@@ -14,19 +14,13 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
 public class BookRepositoryImpl extends Repository implements BookRepository {
 
     private static final BookEntity entity = new BookEntity(1, "Title", "Author", "Desc", "ISBN", LocalDate.now(), 1, LocalDate.now());
-
-   /* private static final String INIT_TABLES = "CREATE TABLE IF NOT EXISTS pjatk.books (" +
-            "book_id serial primary key," +
-            "title VARCHAR(32) not null," +
-            "author VARCHAR(64) not null," +
-            "description VARCHAR(512)" +
-            ");";*/
 
     private static final String INIT_TABLES = "CREATE TABLE IF NOT EXISTS pjatk.books (" +
             "book_id serial primary key," +
@@ -44,39 +38,38 @@ public class BookRepositoryImpl extends Repository implements BookRepository {
 
     @Override
     public List<BookDto> getBooks() {
-        String sql = createSelectSql(BookSearchCriteria.builder().build(), entity);
+        String sql = createSelectSql(BookSearchCriteria.builder().build(), entity, false);
         return executeBookDtoQuery(sql);
     }
 
     @Override
     public Optional<BookDto> findBook(int bookId) {
-        String sql = createSelectSql(BookSearchCriteria.builder().bookId(bookId).build(), entity);
-        Connection connection = DataSource.getConnection();
-
+        String sql = createSelectSql(BookSearchCriteria.builder().bookId(bookId).build(), entity, true);
         ResultSet resultSet = null;
-        try{
+        List<BookDto> temp = new ArrayList<>();
+        try (Connection connection = DataSource.getConnection()){
             resultSet = connection.prepareStatement(sql).executeQuery();
+            temp = mapper.map(resultSet);
         } catch (SQLException e) {
             e.printStackTrace();
             return null;
         }
 
-        List<BookDto> temp = mapper.map(resultSet);
         return temp.size() > 0 ? Optional.of(temp.get(0)) : Optional.empty();
     }
 
     @Override
     public List<BookDto> searchBooks(SearchCriteria criteria) {
-        String sql = createSelectSql(criteria, entity);
+        String sql = createSelectSql(criteria, entity, false);
         return executeBookDtoQuery(sql);
     }
 
     @Override
     public boolean addBook(BookDto bookDto) {
         String sql = createInsertSql(bookDto, entity);
-        Connection connection = DataSource.getConnection();
-        try {
+        try (Connection connection = DataSource.getConnection()){
             connection.prepareStatement(sql).execute();
+            connection.close();
             return true;
         } catch (SQLException e) {
             e.printStackTrace();
@@ -86,8 +79,8 @@ public class BookRepositoryImpl extends Repository implements BookRepository {
 
     @Override
     public void initTable() {
-        Connection connection = DataSource.getConnection();
-        try {
+
+        try (Connection connection = DataSource.getConnection()) {
             connection.prepareStatement(INIT_TABLES).execute();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -95,16 +88,15 @@ public class BookRepositoryImpl extends Repository implements BookRepository {
     }
 
     private List<BookDto> executeBookDtoQuery(String sql) {
-        Connection connection = DataSource.getConnection();
-
         ResultSet resultSet = null;
-        try {
+        List<BookDto> result = null;
+        try (Connection connection = DataSource.getConnection()){
             resultSet = connection.prepareStatement(sql).executeQuery();
+            result = mapper.map(resultSet);
         } catch (SQLException e) {
             e.printStackTrace();
-            return null;
         }
 
-        return mapper.map(resultSet);
+        return result;
     }
 }
